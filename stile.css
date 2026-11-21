@@ -20,7 +20,7 @@ h1, h2, p { margin: 0; }
 .skip { position: absolute; inset: 1rem auto auto 1rem; transform: translateY(-200%); background: white; padding: .7rem 1rem; z-index: 3; }
 .skip:focus { transform: none; }
 .site-header { border-bottom: 1px solid var(--line); }
-.header-inner { min-height: 4.8rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.header-inner { min-height: 4.8rem; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: clamp(1rem, 3vw, 2rem); }
 .brand { display: inline-flex; align-items: center; gap: .65rem; font-size: 1.14rem; font-weight: 750; letter-spacing: -.03em; text-decoration: none; }
 .brand-studio { font-weight: 500; }
 .brand-mark { background: #21362c; padding: .36rem; border-radius: .65rem; display: grid; grid-template-columns: repeat(2, .3rem); gap: .18rem; flex: none; }
@@ -29,6 +29,10 @@ h1, h2, p { margin: 0; }
 nav { display: flex; align-items: center; gap: clamp(.75rem, 3vw, 2rem); font-weight: 600; }
 nav a { text-decoration: none; padding-block: .45rem; }
 nav a:hover, .contact a:hover { text-decoration: underline; text-underline-offset: .24em; }
+.site-links { justify-self: end; }
+.language-switch { gap: .2rem; padding: .2rem; border: 1px solid var(--line); border-radius: 2rem; }
+.language-switch a { display: block; min-width: 2rem; padding: .3rem .45rem; border-radius: 2rem; text-align: center; font-size: .78rem; }
+.language-switch [aria-current="page"] { background: #21362c; color: #fff; }
 
 .intro { padding-block: clamp(2.75rem, 6vw, 5rem) clamp(1.85rem, 4vw, 3.25rem); }
 .intro h1 { font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; font-size: clamp(2.4rem, 6.7vw, 5.25rem); line-height: .99; letter-spacing: -.072em; font-weight: 760; }
@@ -96,6 +100,12 @@ nav a:hover, .contact a:hover { text-decoration: underline; text-underline-offse
   .app-footer { padding-inline: 1.25rem; }
   .device { width: 33%; }
   .contact { margin-top: 2rem; }
+}
+
+@media (max-width: 32rem) {
+  .header-inner { grid-template-columns: 1fr auto; gap: .45rem 1rem; padding-block: .7rem .38rem; }
+  .site-links { grid-row: 2; grid-column: 1 / -1; justify-self: start; }
+  .language-switch { grid-row: 1; grid-column: 2; }
 }
 
 @media (max-width: 24rem) {
