@@ -3,15 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ToccoVivo Studio</title>
+  <meta name="description" content="Scopri le app Android di ToccoVivo Studio. Allenati con Cube Duel e organizza i tuoi turni con Turni Rapidi.">
+  <title>ToccoVivo Studio · Cube Duel e Turni Rapidi</title>
+  <link rel="stylesheet" href="./stile.css">
 </head>
 <body>
-  <main>
-    <h1>ToccoVivo Studio</h1>
-    <ul>
-      <li><a href="/app-info/cube-duel/privacy/">Cube Duel · Informativa sulla privacy</a></li>
-      <li><a href="/app-info/turni-rapidi/privacy/">Turni Rapidi · Informativa sulla privacy</a></li>
-    </ul>
+  <a class="skip" href="#contenuto">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="ToccoVivo Studio, home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>ToccoVivo <span class="brand-studio">Studio</span></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="#app">Le app</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="wrap">
+    <section class="intro" aria-labelledby="titolo">
+      <h1 id="titolo">Allenati con il cubo.<br><span>Organizza i tuoi turni.</span></h1>
+      <p class="status"><span aria-hidden="true"></span> App Android in preparazione per Google Play</p>
+    </section>
+
+    <section id="app" class="apps" aria-label="Le app di ToccoVivo Studio">
+      <article class="app-card cube" aria-labelledby="cube-title">
+        <div class="app-content">
+          <img class="app-icon" src="./immagini/cube-duel-icona.png" alt="" width="56" height="56">
+          <div>
+            <h2 id="cube-title">Cube Duel</h2>
+            <p>Cronometra le risoluzioni, sfida amici e computer e segui la guida 3D per risolvere il cubo.</p>
+          </div>
+        </div>
+        <div class="preview" aria-label="Schermate di Cube Duel">
+          <div class="device device-secondary"><img src="./immagini/cube-duel-risultato.png" alt="Risultato di una sfida contro il computer"></div>
+          <div class="device device-primary"><img src="./immagini/cube-duel-sfida.png" alt="Cubo 3D e sequenza di mescolamento prima della sfida"></div>
+        </div>
+        <div class="app-footer">
+          <span>Android <span aria-hidden="true">·</span> Wear OS</span>
+          <a href="/app-info/cube-duel/privacy/" aria-label="Informativa sulla privacy di Cube Duel">Informativa sulla privacy <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="app-card turni" aria-labelledby="turni-title">
+        <div class="app-content">
+          <img class="app-icon" src="./immagini/turni-rapidi-icona.png" alt="" width="56" height="56">
+          <div>
+            <h2 id="turni-title">Turni Rapidi</h2>
+            <p>Segna turni e riposi in pochi tocchi, controlla le ore del mese e condividi i tuoi giorni liberi.</p>
+          </div>
+        </div>
+        <div class="preview" aria-label="Schermate di Turni Rapidi">
+          <div class="device device-secondary"><img src="./immagini/turni-rapidi-riepilogo.png" alt="Riepilogo mensile con ore programmate, turni e riposi"></div>
+          <div class="device device-primary"><img src="./immagini/turni-rapidi-calendario.png" alt="Calendario mensile con il turno di oggi e quello successivo"></div>
+        </div>
+        <div class="app-footer">
+          <span>Android <span aria-hidden="true">·</span> Wear OS</span>
+          <a href="/app-info/turni-rapidi/privacy/" aria-label="Informativa sulla privacy di Turni Rapidi">Informativa sulla privacy <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <footer id="contatti" class="contact">
+      <h2>Contatti</h2>
+      <a href="mailto:toccovivostudio@gmail.com">toccovivostudio@gmail.com <span aria-hidden="true">↗</span></a>
+    </footer>
   </main>
 </body>
 </html>
